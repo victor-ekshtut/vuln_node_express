@@ -16,6 +16,8 @@ jobs:
         run: npm clean-install
       - name: SonarCloud Scan
         uses: SonarSource/sonarcloud-github-action@v1.6
+        env:
+          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
 
       #- name: Run Application
       #  run: nohup npm run start &
